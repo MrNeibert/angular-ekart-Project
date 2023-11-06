@@ -19,10 +19,9 @@ export class FilterComponent {
   selectedFilterRadioBtnChanged : EventEmitter<string> = new EventEmitter<string>();
 
   selectedFilterRadioButton: string = 'all';
-  
+
   onselectedFilterRadioBtnChanged() {
       this.selectedFilterRadioBtnChanged.emit(this.selectedFilterRadioButton)
-      console.log("selectedFilterRadioBtnChanged raised!");
   }
 
 }
