@@ -1,5 +1,5 @@
 <div class="ekart--product--container">
-<!--   <img src="/src/assets/images/d81a761b5b9c6b54e9bc46c58b3f4fc9.jpg">
+  <!--   <img src="/src/assets/images/d81a761b5b9c6b54e9bc46c58b3f4fc9.jpg">
     <p>Name: {{product.name}}</p>
   <p>Price: {{product.price}}</p>
   <p>Color : {{product.color}}</p>
@@ -10,9 +10,29 @@
 <span>{{addToCart}}</span>
 <button (click)="incrementCartValue()">+</button> -->
   <search (searchTextChanged)="setSearchText($event)"></search>
-<!--   <div *ngFor="let item in listOfString">
+  <!--   <div *ngFor="let item in listOfString">
     <p>Current element of array is : {{item}} </p>
   </div> -->
-  <product-list [searchText]="searchText" #productListComponent ></product-list>
-  <product-detail *ngIf="productListComponent.selectedProduct" [productlistcomp]="productListComponent"></product-detail>
+  <product-list [searchText]="searchText" #productListComponent></product-list>
+  <product-detail *ngIf="productListComponent.selectedProduct"
+    [productlistcomp]="productListComponent"></product-detail>
+
+  <div class="ekart-featured-products">
+    <div class="ekart-featured-products-header">
+      <h1>LatestArrival on Popular Brands!</h1>
+    </div>
+    <featured-brands>
+      <h3 class="title">New Arrivals in Nike</h3>
+      <button class="call-to-action">Show New Arrivals in Nike</button>
+    </featured-brands>
+    <featured-brands>
+      <h3 class="title">New Arrivals in Adidas</h3>
+      <button class="call-to-action">Show New Arrivals in Adidas</button>
+    </featured-brands>
+    <featured-brands>
+      <h3 class="title">New Arrivals in Rebook</h3>
+      <button class="call-to-action">Show New Arrivals in Rebook</button>
+    </featured-brands>
+  </div>
+
 </div>
