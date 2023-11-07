@@ -8,7 +8,12 @@
   <div class="ekart--product--image">
     <img [src]="product.imageURL" class="ekart--product--image">
   </div>
-  <div class="ekart--add--to--price"> {{ '$'+ product.price + '.00'}} </div>
+
+  <div *ngIf="!product.discountPrice; else discountPrice"><div class="ekart--add--to--price"> {{ '$'+ product.price + '.00'}} </div></div>
+  <ng-template #discountPrice>
+    <div class="ekart--add--to--price--discount"> {{ '$'+ product.discountPrice + '.00'}} </div>
+  </ng-template>
+
   <div class="ekart--product--name">{{product.name}}</div>
   <div class="ekart--product--category">{{product.gender}} . {{product.category}} . {{product.brand}}</div>
   <div class="ekart--product--available-colors">{{product.color.length}} {{product.color}} . Best Seller</div>

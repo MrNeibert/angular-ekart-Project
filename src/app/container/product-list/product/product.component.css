@@ -34,12 +34,21 @@
 }
 
 
-.ekart--add--to--price{
+.ekart--add--to--price
+{
   padding:1px 5px;
   position:absolute;
   margin-top: -25px;
   background-color:#28282B;
   color:white;
+
+}
+.ekart--add--to--price--discount{
+  padding:1px 5px;
+  position:absolute;
+  margin-top: -25px;
+  background-color:#FFC000;
+  color:28282B;
 }
 
 .ekart--product--image{

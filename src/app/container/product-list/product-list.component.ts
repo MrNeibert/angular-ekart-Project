@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import {Product} from '../../Models/Products';
 
 @Component({
   selector: 'product-list',
@@ -7,6 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ProductListComponent {
 
+  selectedProduct : Product;
   products = [
     {
       id: 1,
@@ -534,11 +536,12 @@ export class ProductListComponent {
     }
   ];
 
+  
   totalProductCount = this.products.length;
   totalProductInStock = this.products.filter(p => p.is_in_inventory === true).length;
   totalProductOutOfStock = this.products.filter(p => p.is_in_inventory === false).length;
 
-  
+
   @Input()
   searchText: string ='';
 
