@@ -1,9 +1,9 @@
 <filter [all]="totalProductCount" [inStock]="totalProductInStock" [outOfStock]="totalProductOutOfStock"
   (selectedFilterRadioBtnChanged)="onFilterChanged($event)"></filter>
 <div class="ekart--products--container">
-  <div *ngFor="let prod of products" (click)="selectedProduct = prod">
-    <product [product]="prod" *ngIf="searchText === ''|| prod.name.toLowerCase().includes(searchText)" ></product>
-  </div>
+  <ng-container *ngFor="let prod of products" >
+    <product [product]="prod" *ngIf="searchText === ''|| prod.name.toLowerCase().includes(searchText)" (click)="selectedProduct = prod" ></product>
+  </ng-container>
 </div>
 
 
